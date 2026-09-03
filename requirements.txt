@@ -1,0 +1,15 @@
+# Tested environment:
+#   Python 3.11.14
+#   PyTorch 2.5.1 (+cu121 in the validated GPU environment)
+#
+# If you need a CUDA-enabled PyTorch build, install the matching wheel for your
+# platform first, then install the remaining packages from this file.
+
+einops==0.8.1
+mne==1.11.0
+numpy==1.26.4
+pandas==3.0.1
+PyYAML==6.0.3
+scikit-learn==1.7.2
+scipy==1.16.3
+torch==2.5.1

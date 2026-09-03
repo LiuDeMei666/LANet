@@ -1,0 +1,56 @@
+data:
+  dir: datasets/mymat_a
+  dataset_type: A
+  n_subject: 9
+  evaluate_mode: LOSO
+
+model_name: LANet
+
+model:
+  input_samples: 1000
+  eegnet1_f1: 8
+  eegnet1_kernel_size: 64
+  eegnet1_d: 2
+  eegnet1_pool_size1: 4
+  eegnet1_pool_size2: 8
+  eegnet1_dropout_rate: auto
+  flatten_eeg1: 496
+  tcr_reduction: 4
+  tcr_time_kernel: 9
+  tcr_gate_scale: 0.5
+  learnable_tcr_gate_scale: true
+  centered_tcr_gate: false
+  asym_branch_scale: 0.15
+  learnable_asym_branch_scale: true
+  asym_branch_type: legacy
+
+preprocessing:
+  use_bandpass_filter: false
+  bandpass_low_hz: 4.0
+  bandpass_high_hz: 40.0
+  sampling_rate: 250
+  bandpass_order: 5
+  bandpass_filter_type: butter
+  bandpass_filt_mode: filtfilt
+  bandpass_filt_allowance: 2.0
+  normalization_mode: global
+
+training:
+  random_seed: 966
+  subject_seeds:
+    - 1969
+    - 1096
+    - 647
+    - 602
+    - 1773
+    - 1821
+    - 825
+    - 112
+    - 1006
+  epochs: 500
+  batch_size: 72
+  learning_rate: 0.001
+  validate_ratio: 0.3
+  n_aug: 0
+  n_seg: 1
+  label_smoothing: 0.0

@@ -1,0 +1,16 @@
+name: LA-Net
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.14
+  - pip
+  - pip:
+      # Replace torch with the matching CUDA wheel for your platform if needed.
+      - einops==0.8.1
+      - mne==1.11.0
+      - numpy==1.26.4
+      - pandas==3.0.1
+      - PyYAML==6.0.3
+      - scikit-learn==1.7.2
+      - scipy==1.16.3
+      - torch==2.5.1

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+runs/
+datasets/mymat_a/*.mat
+datasets/mymat_b/*.mat
+!datasets/mymat_a/.gitkeep
+!datasets/mymat_b/.gitkeep
+
+ea_cache/
+ra_cache/
